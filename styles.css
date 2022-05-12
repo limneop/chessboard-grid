@@ -49,8 +49,7 @@ h1 {
     padding-top: 0.4vw;
 	display: block;
 	text-align: center;
-	font-size: 8vw;
-	line-height: 12vw;
+	font-size: 2.85rem;
   }
 
 #move1 {
@@ -155,7 +154,7 @@ h1 {
 #move3 {
 	animation-name: pawn3move;
 	animation-duration: 10s;
-	animation-delay: 14s;
+	animation-delay: 15.5s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear reverse;
 }
@@ -190,7 +189,7 @@ h1 {
 #move6 {
 	animation-name: pawn6move;
 	animation-duration: 1s;
-	animation-delay: 18s;
+	animation-delay: 19s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
 }
@@ -217,7 +216,7 @@ h1 {
 #move7 {
 	animation-name: pawn7move;
 	animation-duration: 1s;
-	animation-delay: 21s;
+	animation-delay: 22s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
 }
@@ -241,10 +240,10 @@ h1 {
 
   
 .box:nth-child(n+1):nth-child(-n+32){
-	color: D08B5A;
+	color: 152B42;
 }
 .box:nth-child(n+41):nth-child(-n+64){
-	color: black;
+	color: 511F12;
 }
 
 
@@ -258,19 +257,12 @@ h1 {
 .board .box:nth-child(n+57):nth-child(-n+64):nth-child(odd){
       background-color: gray;
   }
-@media screen and (min-width: 400px){
-	.box{
-		font-size: 45px;
-		line-height: 56px;
-		text-align: center;
-		padding-top: 7px;
-}
-}
-@media screen and (min-width: 300px){
+
+@media only screen and (max-width: 420px){
 	body {
 		overflow: hidden;
 	}
-	.box{
+	.box {
 		font-size: 37px;
 		text-align: center;
 }
@@ -390,6 +382,137 @@ from {
 	bottom: 0rem;
 	left: 0;
 	transform: translate(93px, -100%);
+	background: none;
+	}
+}
+}
+@media only screen and (max-height: 420px) {
+	h1 {
+		display: none;
+	}
+	body {
+		overflow: hidden;
+	}
+	.box {
+		font-size: 34px;
+		text-align: center;
+}
+	.box:nth-child(n+1):nth-child(-n+8){
+		padding-top: 4px;
+}
+	.board {
+		max-width: 320px;
+		max-height: 320px;
+}
+@keyframes pawn1move {
+	from {
+	position: relative;
+	top: 0rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	}
+	to {
+	position: relative;
+	top: 4.6rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	}
+}
+@keyframes pawn2move {
+	from {
+	position: relative;
+	top: 0rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	}
+	to {
+	position: relative;
+	top: -4.7rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	}
+}
+@keyframes pawn5move {
+	from {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0rem;
+	left: 0;
+	transform: translate(0, 0);
+	}
+	to {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0rem;
+	left: 0;
+	transform: translate(300%, 119px);
+	}
+}
+@keyframes pawn4move {
+	from {
+	position: relative;
+	top: 0rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	}
+	to {
+	position: relative;
+	top: -2.5rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	}
+}
+@keyframes pawn3move {
+	0% {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translate(0, 0);
+	}
+	50% {
+	position: relative;
+	top: 0rem;
+	right: 0rem;
+	bottom: 5rem;
+	left: 0;
+	transform: translate(-200%, 80px);
+	}
+	100% {
+	position: relative;
+	top: 14rem;
+	right: 0rem;
+	bottom: 0;
+	left: -4.7rem;
+	transform: translate(0, 0);
+	background: transparent;
+	}
+}
+@keyframes pawn6move {
+from {
+	position: relative;
+	top: 0rem;
+	right: 0rem;
+	bottom: 0rem;
+	left: 0rem;
+	transform: translate(0, 0);
+	}
+	to {
+	position: relative;
+	top: -2.4rem;
+	right: 0;
+	bottom: 0rem;
+	left: 0;
+	transform: translate(80px, -100%);
 	background: none;
 	}
 }
